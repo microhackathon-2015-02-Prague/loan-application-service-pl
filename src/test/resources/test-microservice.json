@@ -1,6 +1,6 @@
 {
     "pl": {
-        "this": "com/ofg/test-twitter-places-analyzer",
+        "this": "com/ofg/test-loan-application-service-pl",
         "dependencies": {
             "collerator": {
                 "path": "com/ofg/twitter-places-collerator"
