@@ -1,9 +1,12 @@
 {
     "pl": {
-        "this": "com/ofg/twitter-places-analyzer",
+        "this": "com/ofg/loan-application-service-pl",
         "dependencies": {
-            "collerator": {
-                "path": "com/ofg/twitter-places-collerator"
+            "fraud-detection-service-pl": {
+                "path": "com/ofg/fraud-detection-service-pl"
+            },
+            "reporting-service-pl": {
+                "path": "com/ofg/reporting-service-pl"
             }
         }
     }
