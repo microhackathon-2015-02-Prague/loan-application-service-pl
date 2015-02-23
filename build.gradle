@@ -53,6 +53,14 @@ configurations {
     }
 }
 
+sourceSets {
+    test {
+        resources {
+            srcDir 'repository'
+        }
+    }
+}
+
 project.gradle.projectsEvaluated {
     applicationDefaultJvmArgs = project.gradle.startParameter.systemPropertiesArgs.entrySet().collect{"-D${it.key}=${it.value}"}
 }
