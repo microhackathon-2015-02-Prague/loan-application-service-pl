@@ -3,15 +3,15 @@ io.coderate.accurest.dsl.GroovyDsl.make {
         method 'PUT'
         url '/api/loanApplication'
         headers {
-            header 'Content-Type': 'application/vnd.com.ofg.twitter-places-analyzer.v1+json'
+            header 'Content-Type': 'application/vnd.com.ofg.loan-application-service-pl.v1+json'
         }
         body '''\
     [{
-        "name": "Sat Jul 26 09:38:57 +0000 2014",
-        "surname": 492967299297845248,
-        "age": "492967299297845248",
-        "jobpossition": "Gonna see you at Warsaw",
-        "amount": "Gonna see you at Warsaw"
+         "name": "X",
+         "position": "IT",
+         "amount": 100,
+         "age": 40,
+         "surname": "Y"
     }]
 '''
     }
