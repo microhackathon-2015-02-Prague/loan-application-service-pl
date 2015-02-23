@@ -1,5 +1,6 @@
 package com.ofg.loan.applocation.service.pl.service
 
+import com.ofg.loan.applocation.service.pl.model.LoanApplication
 import com.wordnik.swagger.annotations.Api
 import com.wordnik.swagger.annotations.ApiOperation
 import groovy.transform.TypeChecked
@@ -29,9 +30,13 @@ class LoanApplicationController {
             produces = LOAN_APPLICATION_SERVICE_JSON_VERSION_1)
     @ApiOperation(value = "generate loan application",
             notes = "This bla blah blah")
-    Callable<Void> getLoanApplication(@RequestBody @NotNull long loanApplication) {
+    Callable<Void> getLoanApplication(@RequestBody @NotNull LoanApplication loanApplication) {
         return {
-            //propagationWorker.collectAndPropagate(pairId, tweets)
+            System.out.println(loanApplication.name)
+            System.out.println(loanApplication.surname)
+            System.out.println(loanApplication.position)
+            System.out.println(loanApplication.age)
+            System.out.println(loanApplication.amount)
         }
     }
 }
