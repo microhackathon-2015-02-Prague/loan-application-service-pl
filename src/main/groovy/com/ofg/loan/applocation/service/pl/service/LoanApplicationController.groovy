@@ -41,43 +41,5 @@ class LoanApplicationController {
         FraudDetection fraudDetection = FraudDetection.fromLoanApplication(loanApplication)
         //saveLoanApp(loanApplication)
         fraudDetectorClient.putFraud("123", fraudDetection)
-        return {
-            System.out.println(loanApplication.name)
-            System.out.println(loanApplication.surname)
-            System.out.println(loanApplication.position)
-            System.out.println(loanApplication.age)
-            System.out.println(loanApplication.amount)
-        }
     }
-
-    /*def hibProps = [
-            "hibernate.dialect": "org.hibernate.dialect.HSQLDialect",
-            "hibernate.connection.driver_class": "org.hsqldb.jdbcDriver",
-            "hibernate.connection.url": "jdbc:hsqldb:mem:demodb",
-            "hibernate.connection.username": "sa",
-            "hibernate.connection.password": "",
-            "hibernate.connection.pool_size": "1",
-            "hibernate.connection.autocommit": "true",
-            "hibernate.cache.provider_class": "org.hibernate.cache.NoCacheProvider",
-            "hibernate.hbm2ddl.auto": "create-drop",
-            "hibernate.show_sql": "true",
-            "hibernate.transaction.factory_class": "org.hibernate.transaction.JDBCTransactionFactory",
-            "hibernate.current_session_context_class": "thread"
-    ]
-
-    def configureHibernate(props) {
-        def config = new AnnotationConfiguration()
-        props.each { k, v -> config.setProperty(k, v) }
-        config.addAnnotatedClass(LoanApplication)
-        return config
-    }
-
-    void saveLoanApp(LoanApplication loanApplication) {
-        def factory = configureHibernate(hibProps).buildSessionFactory()
-
-        def session = factory.currentSession
-        def tx = session.beginTransaction()
-        session.save(loanApplication)
-        tx.commit()
-    }*/
 }
